@@ -1,0 +1,28 @@
+/*
+	TEAM
+*/
+Design, Markup, Code, Good Intentions: Laurentiu Danu
+Site: http://laurentiudanu.github.io
+Location: Braila City, Romania
+/* 
+	RESOURCES
+*/
+Font Embedding with Google Fonts
+
+/* 
+	SITE + TECHNOLOGY
+*/
+Github pages
+
+Built With:
+SASS, Jade, Media Queries, jQuery
+
+Software:
+Prepros:
+https://prepros.io/
+Notepad++:
+https://notepad-plus-plus.org/
+Google Chrome and Github Desktop
+
+Language:
+English
