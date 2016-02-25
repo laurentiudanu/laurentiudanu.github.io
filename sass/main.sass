@@ -1,0 +1,104 @@
+@import 'base'
+@font-face
+  font-family: 'Montserrat'
+  font-style: normal
+  font-weight: 400
+  src: local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v6/zhcz-_WihjSQC0oHJ9TCYPk_vArhqVIZ0nv9q090hN8.woff2) format('woff2')
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000
+
+@font-face
+  font-family: 'Montserrat'
+  font-style: normal
+  font-weight: 700
+  src: local('Montserrat-Bold'), url(https://fonts.gstatic.com/s/montserrat/v6/IQHow_FEYlDC4Gzy_m8fcoWiMMZ7xLd792ULpGE4W_Y.woff2) format('woff2')
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000  
+  
+body
+  font: 16px/1.2 "Montserrat", Helvetica, Arial, sans-serif
+  background-color: #FDF8F4
+  color: #0C0C0C
+  overflow-x: hidden
+  transition: all 800ms ease-in-out
+  & > *
+    opacity: 0
+    transition: all 1200ms ease-in-out
+.content-visible > *
+  opacity: 1
+  
+.inactive
+  background-color: #f7ebe0
+  & > *
+    /* opacity: 0.2 */
+
+header
+  border-bottom: 1px solid rgba(#000, .2)
+h1
+  color: #592dd6
+  font-weight: 700
+  span 
+    font-weight: 400
+    padding-left: 8px
+    color: rgba(#000, .7)
+h2
+  font-weight: 700
+  font-size: 2em
+  margin: 0 0 1em 0
+.wrapper
+  width: 90%
+  margin: 0 auto
+  padding: 36px
+  border-left: 1px solid rgba(#000, .2)
+
+section
+  border-bottom: 1px solid rgba(#000, .2)
+  &:last-of-type
+    border-bottom: 0
+  
+article
+  width: 600px
+  &.first
+    padding: 4vw 0
+  p
+    margin: 0 0 1em 0
+    &:first-of-type
+      font-weight: 700
+      font-size: 2em
+    &:nth-child(2)
+      margin: 0
+    &:nth-child(3)
+      text-indent: 1em
+    & .not
+      text-decoration: line-through
+      opacity: 0.7
+    &:last-of-type
+      color: #000
+      padding-top: 1em
+  li
+    margin-bottom: 2em
+  li p
+    margin: 0
+    padding: 0
+    &:first-of-type
+      font-weight: 700
+      font-size: 1em
+      color: #fe5959
+    &:last-of-type
+      padding-top: 0
+    &:nth-child(3)
+      text-indent: 0
+  a
+    color: inherit
+    &:hover
+      color: #fe5959
+
+a
+  color: #fe5959
+  &:hover
+    text-decoration: underline
+
+@media (max-width: 600px)
+  h1 span
+    padding-left: 0
+    display: block
+  article
+    width: 100%
