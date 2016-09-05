@@ -107,6 +107,15 @@ body {
   position: relative;
   padding-top: 48px;
 }
+.document-wrapper {
+  opacity: 0;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+  .document-wrapper.active {opacity: 1;}
 header {
   height: 48px;
   line-height: 48px;
@@ -210,30 +219,60 @@ article {
     font-family: "Montserrat", Helvetica, Arial, sans-serif;
   }
     article p:last-of-type, .extra p {color: #e83e08;}
-    article p a, .extra p a {color: #e83e08; display: inline-block; padding: 4px 8px; border: 1px solid #e83e08;}
+    article p a, .extra p a {
+      color: #e83e08;
+      display: inline-block;
+      padding: 4px 8px;
+      border: 1px solid #e83e08;
+      -webkit-transition: all 200ms ease-in-out;
+      -moz-transition: all 200ms ease-in-out;
+      -ms-transition: all 200ms ease-in-out;
+      -o-transition: all 200ms ease-in-out;
+      transition: all 200ms ease-in-out;
+    }
       article p a:hover, .extra p a:hover {color: #fff; background-color: #e83e08;}
 
 .portfolio-wrapper {
   position: relative;
   width: 90%;
-  padding: 56px 0;
+  padding: 16px 0 128px 0;
   margin: 0 auto;
 }
+  .portfolio-wrapper .pw-nav {
+    display: block;
+    position: absolute;
+    font: 0/0 a;
+    color: transparent;
+    top: 30%;
+    width: 64px;
+    height: 64px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: scroll;
+    background-size: cover !important;
+    opacity: 0.6;
+    z-index: 400;
+  }
+    .portfolio-wrapper .pw-nav:hover {opacity: 1;}
+    .portfolio-wrapper .pw-nav.prev {
+      background-image: url(images/prev.png);
+      left: -64px;
+    }
+    .portfolio-wrapper .pw-nav.next {
+      background-image: url(images/next.png);
+      right: -64px;
+    }
   .portfolio-wrapper .pw-entry {
     height: 360px;
     position: relative;
-    margin-bottom: 56px;
     background-color: transparent;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-size: cover !important;
-    -webkit-transition: all 300ms ease-in-out;
-    -moz-transition: all 300ms ease-in-out;
-    -ms-transition: all 300ms ease-in-out;
-    -o-transition: all 300ms ease-in-out;
-    transition: all 300ms ease-in-out;
+    display: none;
   }
+    .portfolio-wrapper .pw-entry.visible {display: block;}
     .portfolio-wrapper .pw-entry .thumb {
       margin: 0 auto;
       position: relative;
@@ -246,6 +285,11 @@ article {
       position: absolute;
       left: 48px;
       top: 48px;
+      -webkit-transition: all 300ms ease-in-out;
+      -moz-transition: all 300ms ease-in-out;
+      -ms-transition: all 300ms ease-in-out;
+      -o-transition: all 300ms ease-in-out;
+      transition: all 300ms ease-in-out;
     }
     .portfolio-wrapper .pw-entry .name {
       font-weight: 400;
@@ -257,11 +301,18 @@ article {
       left: 48px;
       top: 116px;
       font-family: "saya_fyblack_italic", Helvetica, Arial, sans-serif;
+      -webkit-transition: all 300ms ease-in-out;
+      -moz-transition: all 300ms ease-in-out;
+      -ms-transition: all 300ms ease-in-out;
+      -o-transition: all 300ms ease-in-out;
+      transition: all 300ms ease-in-out;
+      opacity: 0;
     }
+      .portfolio-wrapper .pw-entry.visible .name {opacity: 1;}
     .portfolio-wrapper .pw-entry:hover {
       cursor: pointer;
     }
-    .portfolio-wrapper .pw-entry:hover .name {color: #fff;}
+    .portfolio-wrapper .pw-entry:hover .name {color: #fff; font-size: 72px;}
     .portfolio-wrapper .pw-entry:hover .info {color: transparent;}
   .portfolio-wrapper .entry-01 {background-color: #26ab98; background-image: url(images/entry-01-bg.jpg);}
   .portfolio-wrapper .entry-02 {background-color: #0098c3; background-image: url(images/entry-02-bg.jpg);}
@@ -272,5 +323,5 @@ article {
   margin: 0 auto;
   position: relative;
   text-align: center;
-  padding: 16px 0 48px 0;
+  padding: 48px 0;
 }
