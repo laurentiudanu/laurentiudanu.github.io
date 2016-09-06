@@ -99,13 +99,16 @@ table {max-width: 100%; width: 100%; empty-cells: show;}
 }
 body {
 	font: 18px/1.5 "Raleway", Helvetica, Arial, sans-serif;
-  background: #fdf2f2;
+  background-color: #fdf2f2;
+  background-image: url(images/circuit-left.png), url(images/circuit-bottom.png);
+  background-repeat: no-repeat, no-repeat;
+  background-position: 0 100%, 97% 100%;
 	color: #0a1a06;
 	overflow-x: hidden;
   text-rendering: auto;
   width: 100vw;
   position: relative;
-  padding-top: 48px;
+  padding: 48px 0 16px 0;
 }
 .document-wrapper {
   opacity: 0;
@@ -151,6 +154,7 @@ header {
     color: #000;
   }
   header a:hover {color: #e83e08;}
+
 article {
   width: 90%;
   margin: 0 auto;
@@ -167,7 +171,7 @@ article {
     z-index: 300;
   }
   article h2 {
-    font-size: 148px;
+    font-size: 152px;
     font-weight: 400;
     font-family: "saya_fyblack_italic", Montserrat, Helvetica, Arial, sans-serif;
     letter-spacing: -1px;
@@ -185,11 +189,11 @@ article {
       height: 98%;
       content: "";
       position: absolute;
-      left: -13%;
-      top: 15%;
+      left: -15%;
+      top: 19%;
       background-color: rgba(230, 230, 230, 0.4);
       z-index: -1;
-      opacity: 0.5;
+      opacity: 0.55;
       -moz-transform: rotate(-35deg);
       -webkit-transform: rotate(-35deg);
       -o-transform: rotate(-35deg);
@@ -197,15 +201,15 @@ article {
       transform: rotate(-35deg);
     }
     article h2:before {
-      width: 90%;
-      height: 98%;
+      width: 86%;
+      height: 94%;
       content: "";
       position: absolute;
-      left: -12%;
-      top: 24%;
+      left: 8%;
+      top: 16%;
       background-color: rgba(230, 230, 230, 0.65);
       z-index: -1;
-      opacity: 0.35;
+      opacity: 0.55;
       -moz-transform: rotate(-35deg);
       -webkit-transform: rotate(-35deg);
       -o-transform: rotate(-35deg);
@@ -235,7 +239,7 @@ article {
 .portfolio-wrapper {
   position: relative;
   width: 90%;
-  padding: 16px 0 128px 0;
+  padding: 16px 0 136px 0;
   margin: 0 auto;
 }
   .portfolio-wrapper .pw-nav {
@@ -317,6 +321,11 @@ article {
   .portfolio-wrapper .entry-01 {background-color: #26ab98; background-image: url(images/entry-01-bg.jpg);}
   .portfolio-wrapper .entry-02 {background-color: #0098c3; background-image: url(images/entry-02-bg.jpg);}
   .portfolio-wrapper .entry-03 {background-color: #eb8282; background-image: url(images/entry-03-bg.jpg);}
+  .portfolio-wrapper .entry-04 {background-color: #00B8C9; background-image: url(images/entry-04-bg.jpg);}
+  .portfolio-wrapper .entry-05 {background-color: #ea205e; background-image: url(images/entry-05-bg.jpg);}
+  .portfolio-wrapper .entry-06 {background-color: #ff4f5f; background-image: url(images/entry-06-bg.jpg);}
+  .portfolio-wrapper .entry-07 {background-color: #3ECC33; background-image: url(images/entry-07-bg.jpg);}
+  .portfolio-wrapper .entry-08 {background-color: #1B5F9F; background-image: url(images/entry-08-bg.jpg);}
 /*color: #e20707;*/
 .extra {
   width: 90%;

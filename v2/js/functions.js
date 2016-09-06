@@ -16,8 +16,8 @@ window.onload = function() {
       $(window).scroll(function(){
         var scrolledY = $(window).scrollTop(),
             animated = false,
-            nscrl = -(scrolledY / 5),
-            pscrl = (scrolledY / 5);
+            nscrl = -(scrolledY / 4),
+            pscrl = (scrolledY / 4);
         if (scrolledY >= 32 && animated == false) {
           $(".scrollable").css({
             "transform": "translateX(0px) translateY(" + nscrl + "px)",
