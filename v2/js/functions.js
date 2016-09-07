@@ -54,7 +54,10 @@ window.onload = function() {
       }
       return false;
     });
-
+    $(".portfolio-wrapper .pw-entry").click(function(){
+      var urlToGo = $(this).attr("data-url");
+      window.open(urlToGo);
+    });
   })(jQuery);
 }
 

@@ -164,8 +164,8 @@ article {
   top: 10vh;
 }
   article .right {
-    width: 60%;
-    margin: 0 0 0 40%;
+    width: 55%;
+    margin: 0 0 0 45%;
     padding: 64px 0 0 0;
     position: relative;
     z-index: 300;
@@ -216,7 +216,7 @@ article {
       -ms-transform: rotate(-35deg);
       transform: rotate(-35deg);
     }
-  article p, .extra p {
+  article p {
     font-size: 18px;
     line-height: 1.4em;
     margin-bottom: 24px;
@@ -239,9 +239,35 @@ article {
 .portfolio-wrapper {
   position: relative;
   width: 90%;
-  padding: 16px 0 136px 0;
+  padding: 36px 0 72px 0;
   margin: 0 auto;
 }
+  .portfolio-wrapper h3 {
+    position: absolute;
+    right: 0;
+    top: -20%;
+    color: transparent;
+    font: 0/0 a;
+    width: 520px;
+    height: 520px;
+    z-index: -1;
+  }
+    .portfolio-wrapper h3:after {
+      display: block;
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-color: rgba(230, 230, 230, 0.90);
+      opacity: 0.65;
+      -moz-transform: rotate(-35deg);
+      -webkit-transform: rotate(-35deg);
+      -o-transform: rotate(-35deg);
+      -ms-transform: rotate(-35deg);
+      transform: rotate(-35deg);
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
   .portfolio-wrapper .pw-nav {
     display: block;
     position: absolute;
@@ -326,11 +352,24 @@ article {
   .portfolio-wrapper .entry-06 {background-color: #ff4f5f; background-image: url(images/entry-06-bg.jpg);}
   .portfolio-wrapper .entry-07 {background-color: #3ECC33; background-image: url(images/entry-07-bg.jpg);}
   .portfolio-wrapper .entry-08 {background-color: #1B5F9F; background-image: url(images/entry-08-bg.jpg);}
+  .portfolio-wrapper .entry-09 {background-color: #532c6e; background-image: url(images/entry-09-bg.jpg);}
+  .portfolio-wrapper .entry-10 {background-color: #14306F; background-image: url(images/entry-10-bg.jpg);}
+  .portfolio-wrapper .entry-11 {background-color: #006633; background-image: url(images/entry-11-bg.jpg);}
+  .portfolio-wrapper .entry-12 {background-color: #00132E; background-image: url(images/entry-12-bg.jpg);}
+  .portfolio-wrapper .entry-13 {background-color: #AEE239; background-image: url(images/entry-13-bg.jpg);}
+  .portfolio-wrapper .entry-14 {background-color: #000; background-image: url(images/entry-14-bg.jpg);}
+  .portfolio-wrapper .entry-15 {background-color: #006633; background-image: url(images/entry-15-bg.jpg);}
+  .portfolio-wrapper .entry-16 {background-color: #e8a710; background-image: url(images/entry-16-bg.jpg);}
 /*color: #e20707;*/
-.extra {
+footer {
   width: 90%;
+  padding: 16px 0 36px 0;
   margin: 0 auto;
-  position: relative;
   text-align: center;
-  padding: 48px 0;
 }
+  footer p {
+    color: #e83e08;
+    font-size: 18px;
+    line-height: 1.4em;
+    font-family: "Montserrat", Helvetica, Arial, sans-serif;
+  }
