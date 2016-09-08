@@ -1,13 +1,63 @@
 window.onload = function() {
   (function($){
-    $("body").addClass("content-visible");
-    $(window).blur(function () {
-      $("body").addClass("inactive");
+    $(".document-wrapper").addClass("active");
+    $('header a[href*="#"]').click(function() {
+	     if (location.pathname == this.pathname && location.host == this.host) {
+	       var target = $(this.hash);
+    	   $('html,body').animate({
+  		   scrollTop: ($(target).offset().top)}, 1000);
+         return false;
+	    };
     });
-    $(window).focus(function () {
-      $("body").removeClass("inactive");
+
+
+    var winWidth = $(window).width();
+    if (winWidth > 1024) {
+      $(window).scroll(function(){
+        var scrolledY = $(window).scrollTop(),
+            animated = false,
+            nscrl = -(scrolledY / 4),
+            pscrl = (scrolledY / 4);
+        if (scrolledY >= 32 && animated == false) {
+          $(".scrollable").css({
+            "transform": "translateX(0px) translateY(" + nscrl + "px)",
+            "-webkit-transform": "translateX(0px) translateY(" + nscrl + "px)"
+          });
+          animated = true;
+        }
+        else {
+          $(".scrollable").css({
+            "transform": "translateX(0px) translateY(" + pscrl + "px)",
+            "-webkit-transform": "translateX(0px) translateY(" + pscrl + "px)"
+          });
+          animated = false;
+        }
+      });
+    }
+    $(".portfolio-wrapper .next").click(function(){
+      if($(".portfolio-wrapper .pw-entry.visible").next().is(".pw-entry")) {
+        $(".portfolio-wrapper .pw-entry.visible").removeClass("visible").next().addClass("visible");
+      }
+      else {
+        $(".portfolio-wrapper .pw-entry").removeClass("visible");
+        $(".portfolio-wrapper .pw-entry:first").addClass("visible");
+      }
+      return false;
     });
-    
+    $(".portfolio-wrapper .prev").click(function(){
+      if($(".portfolio-wrapper .pw-entry.visible").prev().is(".pw-entry")) {
+        $(".portfolio-wrapper .pw-entry.visible").removeClass("visible").prev().addClass("visible");
+      }
+      else {
+        $(".portfolio-wrapper .pw-entry").removeClass("visible");
+        $(".portfolio-wrapper .pw-entry:last").addClass("visible");
+      }
+      return false;
+    });
+    $(".portfolio-wrapper .pw-entry").click(function(){
+      var urlToGo = $(this).attr("data-url");
+      window.open(urlToGo);
+    });
   })(jQuery);
 }
 
@@ -23,14 +73,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
   }
   else {
     pHtml.setAttribute( 'class', 'touch' );
-    function checkOrientation(){
-      var oA = window.orientation;
-        pHtml.setAttribute( 'class', 'touch orientation-'+oA );
-    }
-    window.addEventListener('orientationchange', function () {
-      checkOrientation();
-    });
-    checkOrientation();
   }
 
 });

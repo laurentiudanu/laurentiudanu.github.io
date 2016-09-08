@@ -2,8 +2,8 @@
 	TEAM
 */
 Design, Markup, Code, Good Intentions: Laurentiu Danu
-Site: http://laurentiudanu.github.io
-Location: Braila City, Romania
+Site: http://kontrapunkte.com/
+Location: Bucharest, Romania
 /* 
 	RESOURCES
 */
@@ -15,14 +15,12 @@ Font Embedding with Google Fonts
 Github pages
 
 Built With:
-SASS, Jade, Media Queries, jQuery
+Html, CSS3, Media Queries, jQuery
 
 Software:
-Prepros:
-https://prepros.io/
-Notepad++:
-https://notepad-plus-plus.org/
-Google Chrome and Github Desktop
+Atom
+Google Chrome 
+Github Desktop
 
 Language:
 English
