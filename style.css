@@ -118,7 +118,7 @@ body {
   -o-transition: all 800ms ease-in-out;
   transition: all 800ms ease-in-out;
 }
-  .document-wrapper.active {opacity: 1;}
+  .document-wrapper.active {opacity: 1; overflow-x: hidden;}
 header {
   height: 48px;
   line-height: 48px;
@@ -393,13 +393,13 @@ footer {
   article .right {width: 90%; margin: 0 auto;}
   article p:last-of-type, .extra p {text-align: center;}
   article h2 {position: relative; top: -24px; text-align: center; width: 100%; line-height: 122px;}
-  .portfolio-wrapper .pw-entry {height: 400px;}
+  .portfolio-wrapper .pw-entry {height: 480px;}
 }
 @media (max-width: 740px) {
   header {position: static;}
   header .work, header .contact {display: none;}
   header h1 {text-align: center; position: static;}
-  article h2 {font-size: 90px; line-height: 82px;}
+  article h2 {font-size: 84px; line-height: 78px;}
   .portfolio-wrapper .pw-entry .name {font-size: 32px; top: 136px; left: 24px;}
   .portfolio-wrapper .pw-entry .info {left: 24px;}
   body {
