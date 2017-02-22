@@ -373,6 +373,11 @@ footer {
     line-height: 1.4em;
     font-family: "Montserrat", Helvetica, Arial, sans-serif;
   }
+  footer div {
+    display: table;
+    margin: 0 auto;
+    padding: 24px 0 0 0;
+  }
 
 @media (min-width: 1600px) {
   .document-wrapper {width: 90%; margin: 0 auto;}
