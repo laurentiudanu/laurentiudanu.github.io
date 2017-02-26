@@ -1,0 +1,7 @@
+Digital product designer on a mission to create an accessible and performant web.
+
+I can offer Branding (styleguides — including typography, iconography etc. and associated documentation)
+Pattern libraries (catalogues of attractive and accessible interface components written in HTML, JS, and CSS)
+Prototyping
+Accessibility remediation (diagnosis and advice on fixing and usability issues)
+Fast, responsive websites
