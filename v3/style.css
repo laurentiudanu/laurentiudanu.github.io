@@ -232,7 +232,7 @@ h1 {
   }
     .main-info section div {padding: 184px 32px 0 32px;}
       .main-info section div p {font-size: 24px;}
-      .main-info section div p:first-of-type {margin-bottom: 16px;}
+        .main-info section div p:first-of-type {margin-bottom: 16px;}
   .main-info .section_shade {
     position: absolute;
     width: 100%;
@@ -309,3 +309,119 @@ h1 {
     .night .main-info a:hover:before, .night .main-info a:hover:after {
       opacity: 0.3;
     }
+
+.folio-entry {padding: 128px 0;}
+  .folio-entry .fe-main {
+    width: 640px;
+    height: 574px;
+    position: relative;
+    background-color: rgba(255,255,255,1);
+    float: left;
+    margin: 0 0 0 112px;
+    z-index: 200;
+  }
+  .folio-entry.reverse .fe-main {
+    float: right;
+    margin: 0 112px 0 0;
+  }
+    .folio-entry .fe-main p {
+      font-family: "Montserrat", Helvetica, Arial, sans-serif;
+      font-size: 24px;
+      font-weight: 600;
+      position: absolute;
+      top: -48px;
+      right: -48px;
+    }
+    .folio-entry.reverse .fe-main p {right: auto; left: -48px;}
+    .folio-entry .fe-main:before {
+      display: block;
+      content: "";
+      width: 100%;
+      height: 64px;
+      background: url(images/main-info-shadow.png) repeat scroll;
+      opacity: 0.3;
+      position: absolute;
+      top: -64px;
+      right: -64px;
+      z-index: -1;
+    }
+    .folio-entry.reverse .fe-main:before {
+      right: auto;
+      left: -64px;
+    }
+    .folio-entry .fe-main:after {
+      display: block;
+      content: "";
+      width: 64px;
+      height: 100%;
+      background: url(images/main-info-shadow.png) repeat scroll;
+      opacity: 0.3;
+      position: absolute;
+      top: 0;
+      right: -64px;
+      z-index: -1;
+    }
+    .folio-entry.reverse .fe-main:after {
+      right: auto;
+      left: -64px;
+    }
+  .folio-entry .fe-secondary {
+    width: 448px;
+    height: 384px;
+    position: relative;
+    background-color: rgba(255,255,255,1);
+    z-index: 300;
+    -webkit-box-shadow: 0 8px 24px 0 rgba(0,0,0,0.5);
+    box-shadow: 0 8px 24px 0 rgba(0,0,0,0.5);
+  }
+  .folio-entry .fe-secondary.fes_1 {
+    margin: -320px 16px 0 0;
+    float: right;
+  }
+  .folio-entry.reverse .fe-secondary.fes_1 {
+    float: left;
+    margin: -320px 0 0 16px;
+  }
+  .folio-entry .fe-secondary.fes_2 {
+    margin: -96px 0 0 272px;
+    float: left;
+    z-index: 320;
+  }
+  .folio-entry.reverse .fe-secondary.fes_2 {
+    margin: -96px 0 0 432px;
+    float: left;
+  }
+
+.extra-info {
+  width: 992px;
+  margin: 0 auto;
+  padding: 64px 0 128px 0;
+}
+  .extra-info p {font-size: 24px; margin-bottom: 32px;}
+  .night .extra-info p {color: #e0e0e0;}
+    .extra-info p:last-of-type {margin-bottom: 0;}
+  .extra-info a {
+    color: #000;
+    display: inline-block;
+    position: relative;
+  }
+  .night .extra-info a {color: #fff;}
+    .extra-info a:after {
+      display: block;
+      content: "";
+      width: 100%;
+      height: 50%;
+      position: absolute;
+      background-color: rgba(255,255,255,0.3);
+      bottom: -8px;
+      right: -8px;
+      z-index: -1;
+      opacity: 1;
+      -webkit-transition: all 150ms ease-in-out;
+      -moz-transition: all 150ms ease-in-out;
+      -ms-transition: all 150ms ease-in-out;
+      -o-transition: all 150ms ease-in-out;
+      transition: all 150ms ease-in-out;
+    }
+    .night .extra-info a:after {background-color: rgba(0,0,0,0.3);}
+    .extra-info a:hover:after {opacity: 0;}

@@ -4,10 +4,10 @@ window.onload = function() {
         curTimeHour = time.getHours(),
         curTimeMin = time.getMinutes();
     if (curTimeHour > 7 && curTimeHour < 19) {
-      $("body").addClass("day");
+      //$("body").addClass("day");
     }
     else {
-      $("body").addClass("night");
+      //$("body").addClass("night");
     }
     //$(".document-wrapper").addClass("active");
     var motto = $(".main-info h1").text(),
