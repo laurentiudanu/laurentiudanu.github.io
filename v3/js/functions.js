@@ -3,7 +3,7 @@ window.onload = function() {
     var time = new Date($.now()),
         curTimeHour = time.getHours(),
         curTimeMin = time.getMinutes();
-    if (curTimeHour > 7 && curTimeHour < 19) {
+    if (curTimeHour > 6 && curTimeHour < 19) {
       $("body").addClass("day");
     }
     else {
@@ -12,35 +12,16 @@ window.onload = function() {
     //$(".document-wrapper").addClass("active");
     var motto = $(".main-info h1").text(),
         mottoW = $(".main-info h1").width();
-    $(".main-info section").append("<span class='h1_after' style='width: "+mottoW+"px'>"+motto+"</span>");
-    $(".main-info").append("<div class='section_shade'></div>");
     var winWidth = $(window).width();
-    if (winWidth > 1024) {
-      /* $(window).scroll(function(){
-        var scrolledY = $(window).scrollTop(),
-            animated = false,
-            nscrl = -(scrolledY / 4),
-            pscrl = (scrolledY / 4);
-        if (scrolledY >= 32 && animated == false) {
-          $(".scrollable").css({
-            "transform": "translateX(0px) translateY(" + nscrl + "px)",
-            "-webkit-transform": "translateX(0px) translateY(" + nscrl + "px)"
-          });
-          animated = true;
-        }
-        else {
-          $(".scrollable").css({
-            "transform": "translateX(0px) translateY(" + pscrl + "px)",
-            "-webkit-transform": "translateX(0px) translateY(" + pscrl + "px)"
-          });
-          animated = false;
-        }
-      }); */
+    if (winWidth > 840) {
+      $(".main-info section").append("<span class='h1_after' style='width: "+mottoW+"px'>"+motto+"</span>");
+      $(".main-info").append("<div class='section_shade'></div>");
     }
-    $(".portfolio-wrapper .pw-entry").click(function(){
-      var urlToGo = $(this).attr("data-url");
-      window.open(urlToGo);
-    });
+    if (winWidth > 1024) {
+
+
+
+    }
   })(jQuery);
 }
 
