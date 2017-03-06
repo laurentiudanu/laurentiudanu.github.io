@@ -12,3 +12,18 @@ We build brands that inspire. Branding is about expressing a company’s persona
 
 stand out make a statement
 To stand out amongst the noise of
+
+
+Consistency
+
+I care about consistency within a given page and I care about consistency across an entire site. I believe that a consistent experience is easier for users to understand, thus creating a better user experience.
+
+Clarity
+
+When I talk of clarity, I mean of how easy is it for other developers (or future me) to understand the work I’ve done. Can a new team member ramp up quickly? Can a developer building out a new interface do so without stumbling their way through it or missing critical steps?
+
+User Experience
+
+Lastly, how will the user experience be affected by any of the above? For example, if I improve a widget experience for those using screen readers, I want to be able to easily roll out the change to that widget across the site.
+
+How do I address performance in all the ways that it can affect the user experience? How does a consistent design affect the user experience? Is it worthwhile to replace native controls with custom ones?
