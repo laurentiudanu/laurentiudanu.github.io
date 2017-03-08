@@ -1,44 +1,8 @@
-Digital product designer on a mission to create an accessible and performant web.
+My process in 3 easy steps
 
-I can offer Branding (styleguides — including typography, iconography etc. and associated documentation)
-Pattern libraries (catalogues of attractive and accessible interface components written in HTML, JS, and CSS)
-Prototyping
-Accessibility remediation (diagnosis and advice on fixing and usability issues)
-Fast, responsive websites
+1. Gather information about your business, target customer, competitive environment and your biggest goals to create a benchmark for the final product.
 
-Navigating the connected world can be complicated. We help mediate the space between users and the information they need by building intuitive, user-centric interfaces that engage, delight, and communicate clearly on all devices.
+2. Determine the strategy to make an emotional connection with your ideal customer. Every headline and it’s supporting content should be written with intention, each call-to-action crafted to drive a conversion and every detail honed to deliver on your goals.
 
-We build brands that inspire. Branding is about expressing a company’s personality and values, building a comprehensive and consistent experience that resonates with customers and nurtures lasting relationships.
-
-stand out make a statement
-To stand out amongst the noise of
-
-right website engages with your visitors, sets your brand apart and drive results
-
-
-Consistency
-
-I care about consistency within a given page and I care about consistency across an entire site. I believe that a consistent experience is easier for users to understand, thus creating a better user experience.
-
-Clarity
-
-When I talk of clarity, I mean of how easy is it for other developers (or future me) to understand the work I’ve done. Can a new team member ramp up quickly? Can a developer building out a new interface do so without stumbling their way through it or missing critical steps?
-
-User Experience
-
-Lastly, how will the user experience be affected by any of the above? For example, if I improve a widget experience for those using screen readers, I want to be able to easily roll out the change to that widget across the site.
-
-How do I address performance in all the ways that it can affect the user experience? How does a consistent design affect the user experience? Is it worthwhile to replace native controls with custom ones?
-
-
-How I do it
-
-
-Gather information about your business, target customer, competitive environment and your biggest goals to create a benchmark for the final product.
-
-
-Determine the best strategy to make an emotional connection with your ideal customer. Every headline and it’s supporting content should be written with intention, each call-to-action crafted to drive a conversion and every detail honed to deliver on your goals.
-
-
-Design is more than just aesthetics. Employ thoughtful design to create a meaningful experience for your brand and its customers.
+3. Design is more than just aesthetics. Employ thoughtful design to create a meaningful experience for your brand and its customers.
 Launch your website, build momentum and move mountains.
