@@ -13,6 +13,8 @@ We build brands that inspire. Branding is about expressing a company’s persona
 stand out make a statement
 To stand out amongst the noise of
 
+right website engages with your visitors, sets your brand apart and drive results
+
 
 Consistency
 
@@ -27,3 +29,16 @@ User Experience
 Lastly, how will the user experience be affected by any of the above? For example, if I improve a widget experience for those using screen readers, I want to be able to easily roll out the change to that widget across the site.
 
 How do I address performance in all the ways that it can affect the user experience? How does a consistent design affect the user experience? Is it worthwhile to replace native controls with custom ones?
+
+
+How I do it
+
+
+Gather information about your business, target customer, competitive environment and your biggest goals to create a benchmark for the final product.
+
+
+Determine the best strategy to make an emotional connection with your ideal customer. Every headline and it’s supporting content should be written with intention, each call-to-action crafted to drive a conversion and every detail honed to deliver on your goals.
+
+
+Design is more than just aesthetics. Employ thoughtful design to create a meaningful experience for your brand and its customers.
+Launch your website, build momentum and move mountains.
