@@ -231,7 +231,7 @@ h1 {
     background-color: #fcc7f9;
   }
     .main-info section div {padding: 184px 32px 0 32px;}
-      .main-info section div p {font-size: 24px;}
+      .main-info section div p {font-size: 24px; line-height: 38px;}
         .main-info section div p:first-of-type {margin-bottom: 16px;}
   .main-info .section_shade {
     position: absolute;
@@ -369,7 +369,7 @@ h1 {
   margin: 0 auto;
   padding: 64px 0 128px 0;
 }
-  .extra-info p {font-size: 24px; margin-bottom: 32px;}
+  .extra-info p {font-size: 24px; margin-bottom: 32px; line-height: 36px;}
   .night .extra-info p {color: #e0e0e0;}
     .extra-info p:last-of-type {margin-bottom: 0;}
   .extra-info a {
