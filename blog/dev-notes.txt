@@ -6,6 +6,10 @@ setTimeout(function(){
 http://stackoverflow.com/questions/29373266/css-transition-on-page-exit
 
 
+#ff6f6f
+#fa99d6
+#ff9b3b
+
 full index
 
 <!DOCTYPE html>
