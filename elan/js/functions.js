@@ -5,7 +5,7 @@ window.onload = function() {
         $(this).remove();
       });
     }
-    $(".index-animation h1").addClass("delay-800, flash");
+    $(".index-animation h1").addClass("flash");
     $(".index-animation h1").bind('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){ 
       $(this).remove();
       $(".index-animation .ia-1").addClass("bounceIn").bind('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',   function(){ 
