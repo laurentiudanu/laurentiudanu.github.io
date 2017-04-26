@@ -99,6 +99,7 @@ strong {font-weight: 400; font-family: 'bebas_neuebold', Helvetica, Arial, sans-
     text-align: center;
     font-size: 12vw;
     letter-spacing: 12px;
+    opacity: 0;
   }
   .index-animation img {
     margin: 0 auto;
