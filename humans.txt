@@ -3,7 +3,7 @@
 */
 Design, Markup, Code, Good Intentions: Laurentiu Danu
 Site: http://laurentiudanu.github.io
-Location: Braila City, Romania
+Location: Bucharest, Romania
 /* 
 	RESOURCES
 */
