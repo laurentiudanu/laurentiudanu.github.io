@@ -1,0 +1,76 @@
+font-face {
+    font-family: 'museo_sans900';
+    src: url('fonts/museosans_900-webfont.eot');
+    src: url('fonts/museosans_900-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/museosans_900-webfont.woff') format('woff'),
+         url('fonts/museosans_900-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'museo_sans700';
+    src: url('fonts/museosans_700-webfont.eot');
+    src: url('fonts/museosans_700-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/museosans_700-webfont.woff') format('woff'),
+         url('fonts/museosans_700-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'museo_sans500';
+    src: url('fonts/museosans_500-webfont.eot');
+    src: url('fonts/museosans_500-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/museosans_500-webfont.woff') format('woff'),
+         url('fonts/museosans_500-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'museo_sans500_italic';
+    src: url('fonts/museosans_500_italic-webfont.eot');
+    src: url('fonts/museosans_500_italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/museosans_500_italic-webfont.woff') format('woff'),
+         url('fonts/museosans_500_italic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'museo_sans300';
+    src: url('fonts/museosans_300-webfont.eot');
+    src: url('fonts/museosans_300-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/museosans_300-webfont.woff') format('woff'),
+         url('fonts/museosans_300-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'museo_slab900';
+    src: url('fonts/museo_slab_900-webfont.eot');
+    src: url('fonts/museo_slab_900-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/museo_slab_900-webfont.woff') format('woff'),
+         url('fonts/museo_slab_900-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'museo_slab700';
+    src: url('fonts/museo_slab_700-webfont.eot');
+    src: url('fonts/museo_slab_700-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/museo_slab_700-webfont.woff') format('woff'),
+         url('fonts/museo_slab_700-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
