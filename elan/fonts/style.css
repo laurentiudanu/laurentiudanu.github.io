@@ -4,7 +4,6 @@ Author: Alison Iddings
 Author URI: https://gofishdigital.com/
 Version: 1.0
 */
-
 @font-face {
   font-family: Raleway;
   src: url("/wp-content/themes/fidelity/webfonts/Raleway-Light.ttf");
@@ -530,14 +529,12 @@ section, article {
   float: left;
   margin-right: 1rem;
   margin-bottom: 1rem;
-  margin-top: 0.5rem;
 }
 
 .alignright {
   float: right;
   margin-left: 1rem;
   margin-bottom: 1rem;
-  margin-top: 0.5rem;
 }
 
 /* END General & Structure */
@@ -1465,30 +1462,8 @@ aside#b-popup p {
   line-height: 1.4rem;
 }
 
-.add-vertical-separator {position: relative;}
-  .add-vertical-separator:before {
-    display: block;
-    content: "";
-    width: 1px;
-    height: 100%;
-    background-color: #003B5C;
-    position: absolute;
-    top: 0;
-    left: calc(50% - 1px);
-    opacity: 0.15;
-  }
-  .add-vertical-separator .twenty-five:nth-of-type(odd) {padding-right: 3.5em;}
-  .add-vertical-separator .twenty-five:nth-of-type(even) {padding-left: 3.5em;}
-
 /* END Speed Bump */
 /* All Mobile and Small Desktop  ----------------------------------------------------------------------- */
-@media (min-width: 1150px) and (max-width: 1272px) {
-	header {padding: 0 0 0 24px !important;}
-	header .action-links {min-width: 92px !important;}
-	header .main-nav li a {font-size: 15px !important;}
-  header a.button {padding: 15px 16px;}
-  .header-btn-holder {padding: 10px 0 10px 15px !important;}
-} 
 @media only screen and (max-width: 1149px) {
   /* General & Structure  ------------ */
   #heading > div {
@@ -1682,11 +1657,6 @@ aside#b-popup p {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
-  .add-vertical-separator:before {
-    display: none;
-  }
-  .add-vertical-separator .twenty-five:nth-of-type(odd) {padding: 0 0 12px 0; border-bottom: 1px solid #003B5C;}
-  .add-vertical-separator .twenty-five:nth-of-type(even) {padding: 12px 0 0 0;}
   .col4, .col3 {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
@@ -1950,7 +1920,7 @@ aside#b-popup p {
   /* END General */
   /*Header*/
   header {
-    padding: 0 2% 0 2%;
+    padding: 0 2% 0 5%;
   }
   header #search-here {
     width: 250px;
@@ -2012,28 +1982,21 @@ aside#b-popup p {
   header .dropbtn {
     display: none;
   }
-
-  header ul#menu-main-menu > li.menu-item-has-children:hover > a:before, 
-  header ul#menu-main-menu > li.current_page_item.menu-item-has-children > a:before, 
-  header header ul#menu-main-menu > li.current-page-parent.menu-item-has-children > a:before , 
-  header ul#menu-main-menu > li:not(.menu-item-has-children):hover > a:before, 
-  header ul#menu-main-menu > li.current_page_item:not(.menu-item-has-children) > a:before {
+  header ul#menu-main-menu > li.menu-item-has-children:hover > a:before, header ul#menu-main-menu > li.current_page_item.menu-item-has-children > a:before, header header ul#menu-main-menu > li.current-page-parent.menu-item-has-children > a:before {
     content: " ";
     position: absolute;
     height: 2px;
     background: #007B85;
-    width: 90%;
-    bottom: 2em;
-  } 
-  header ul#menu-main-menu > li:hover > a:before,
-  header ul#menu-main-menu > li.current_page_item > a:before,
-  header ul#menu-main-menu > li.current-menu-ancestor > a:before{
+    width: 100%;
+    bottom: 33px;
+  }
+  header ul#menu-main-menu > li:not(.menu-item-has-children):hover > a:before, header ul#menu-main-menu > li.current_page_item:not(.menu-item-has-children) > a:before {
     content: " ";
     position: absolute;
     height: 2px;
     background: #007B85;
-    width: 90%;
-    bottom: 2em;
+    width: 85px;
+    bottom: -5px;
   }
   header .main-navigation > li.menu-item-has-children:focus {
     outline: none;
@@ -2117,12 +2080,10 @@ aside#b-popup p {
   }
   header .main-nav li a {
     padding: 40.5px 10px 40.5px 0;
-    font-size: 1rem;
-        position: relative;
+    font-size: 1.1rem;
   }
   header .main-nav li:hover > a {
     color: #007B85;
-    position: relative;
   }
   header .main-nav li:hover .sub-menu {
     display: block;
@@ -2366,33 +2327,4 @@ form.post-password-form input[type="submit"] {
 
 .ie-warning a {
   color: #fff;
-}
-
-form#search-filter-form-5230 ul:not(.chosen-results) {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-form#search-filter-form-5230 .chosen-container-multi .chosen-choices {
-  background: url(/wp-content/themes/fidelity/images/down-arrow.svg) no-repeat 98% 10px;
-  height: 29px;
-}
-
-form#search-filter-form-5230 ul .search-field {
-  background: none;
-}
-
-form#search-filter-form-5230 .chosen-container-active ul .search-field {
-  display: none;
-}
-
-
-.page-id-5076 #section5 {
-text-align:center;
 }
