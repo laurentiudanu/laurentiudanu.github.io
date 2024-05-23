@@ -1702,6 +1702,8 @@ b {
   cursor: pointer;
   user-select: none;
 }
+  .pos-frequency-select.extra .option {padding: 8px 12px 8px 48px;}
+}
   .pos-frequency-select .option.selected {border-color: #1B365D;}
   .pos-frequency-select .option:before {
     display: block;
@@ -1716,19 +1718,89 @@ b {
   }
   .pos-frequency-select .option.selected:before {background-color: #1B365D; border-color: #1B365D;}
   .pos-frequency-select .option p {line-height: 32px; font-family: "TTRoundsNeue-DemiBold", Arial, Verdana, sans-serif;}
-  .pos-frequency-select .option span {
+  .pos-frequency-select.extra .option strong {color: #7da7d9;}
+  .pos-frequency-select.extra .option span.note {
     display: inline-block;
     vertical-align: top;
-    padding: 4px 16px;
-    border-radius: 16px;
-    background-color: #7DA7D9;
-    color: #fff;
+    color: #646464;
     font-size: 14px;
     line-height: 14px;
     position: absolute;
     right: 16px;
-    top: 13px;
+    top: 16px;
   }
+  .pos-frequency-select.extra .option .option-pack-size p span:nth-of-type(2) {display: none; text-align: center; height: auto; line-height: 1.5em; color: #646464; font-size: 14px; padding-top: 8px;}
+  .pos-frequency-select.extra .option.selected .option-pack-size p span:nth-of-type(2) {display: block;}
+  .pos-frequency-select.extra .option .option-pack-size p.active span:nth-of-type(2) {color: #1b365d;}
+  .pos-frequency-select.extra .option:before {top: 12px;}
+  .pos-frequency-select.extra .option p {line-height: 36px;}
+  .pos-frequency-select.extra .option p.extra {display: inline-block; vertical-align: top; text-align: center;}
+  .pos-frequency-select.extra .option p span:nth-of-type(1) {margin: 0;}
+  .pos-frequency-select.extra .option p span:nth-of-type(2) {display: none; color: #1b365d; font-size: 14px; padding: 8px 0 0 0; height: auto; line-height: 1.5em;}
+  .pos-frequency-select.extra .option.subscription p span:nth-of-type(2) {padding: 8px 0 0 0;}
+  .pos-frequency-select.extra .option.selected p span:nth-of-type(2) {display: block;}
+  .pos-frequency-select.extra .option .pack-size {margin: 0 8px;}
+  .pos-frequency-select.extra .option .option-inner-price {display: none;}
+  .pos-frequency-select.extra .option.subscription.selected .option-inner-price {display: inline;}
+  .pos-frequency-select.extra .option .option-dd {
+    display: none;
+    pointer-events: none;
+    position: relative;
+    border: 1px solid #B2B8BF;
+    border-radius: 4px;
+    padding: 8px 12px 8px 32px;
+    width: calc(100% + 32px);
+    font-size: 14px;
+    margin: 12px 0 8px -32px;
+    background: url(subscription_repeat.png) no-repeat 8px center scroll; 
+    background-size: 17px;
+  }
+    .pos-frequency-select.extra .option .option-dd:after {
+      display: block;
+      content: "";
+      position: absolute;
+      right: 8px;
+      top: calc(50% - 3px);
+      width: 0px;
+      height: 0px;
+      border-style: solid;
+      border-width: 6px 6px 0 6px;
+      border-color: #1b365d transparent transparent transparent;
+      transform: rotate(0deg);
+    }
+    .pos-frequency-select.extra .option.selected .option-dd {display: block; pointer-events: auto;}
+    .pos-frequency-select.extra .option .option-dd.active {border-radius: 4px 4px 0 0;}
+      .pos-frequency-select.extra .option .option-dd.active:after {transform: rotate(180deg);}
+    .pos-frequency-select.extra .option .option-dd .odd-trigger {
+      display: block;
+      cursor: pointer;
+      font-family: TTRoundsNeue-DemiBold,Arial,Verdana,sans-serif;
+      font-size: 14px;
+      line-height: 14px;
+    }
+    .pos-frequency-select.extra .option .option-dd ul {
+      display: none;
+      pointer-events: none;
+      background-color: #fff;
+      width: calc(100% + 2px);
+      position: absolute;
+      left: -1px;
+      top: 100%;
+      border: 1px solid #B2B8BF;
+      border-radius: 0 0 4px 4px;
+      box-shadow: 0 8px 12px 0 rgba(0,0,0,0.1);
+    }
+      .pos-frequency-select.extra .option .option-dd ul li {
+        cursor: pointer;
+        color: #646464;
+        padding: 4px 12px;
+      }
+      .pos-frequency-select.extra .option .option-dd ul li:nth-of-type(1) {padding: 8px 12px 4px 12px;}
+      .pos-frequency-select.extra .option .option-dd ul li:last-of-type {padding: 4px 12px 8px 12px;}
+      .pos-frequency-select.extra .option .option-dd ul li:hover {color: #000;}
+      .pos-frequency-select.extra .option .option-dd ul li.active {color: #cdcdcd; display: none; pointer-events: none;}
+      .pos-frequency-select.extra .option .option-dd.active ul {display: block; pointer-events: auto; z-index: 200;}
+  
 
 .pack-select-info {margin-bottom: 24px;}
   .pack-select-info p {display: none; font-size: 14px; color: #535455;}
@@ -1740,7 +1812,7 @@ b {
     color: #1b365d;
   }
   .subscription-frequency.visible {display: block; pointer-events: auto;}
-.pos-pack-select, .pos-pack-delivery {
+.pos-pack-select, .pos-pack-delivery, .pos-frequency-select.extra .option .option-pack-size {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -1748,20 +1820,22 @@ b {
   margin-bottom: 8px;
   position: relative;
 }
-  .pos-pack-select p, .pos-pack-delivery p {
+  .pos-pack-select p, .pos-pack-delivery p, .pos-frequency-select.extra .option .pack-size, .pos-frequency-select.extra .option .option-pack-size p span:nth-of-type(1) {
+    display: inline-block;
+    vertical-align: top;
     border: 1px solid #B2B8BF;
-    height: 40px;
-    line-height: 40px;
+    height: 36px;
+    line-height: 36px;
     padding: 0 24px;
     border-radius: 32px;
     cursor: pointer;
     user-select: none;
     font-family: "TTRoundsNeue-DemiBold", Arial, Verdana, sans-serif;
   }
-  .pos-pack-select p:not(:last-of-type), .pos-pack-delivery p:not(:last-of-type) {margin-right: 12px;}
+  .pos-pack-select p:not(:last-of-type), .pos-pack-delivery p:not(:last-of-type), .pos-frequency-select.extra .option .option-pack-size p:not(:last-of-type) {margin-right: 12px;}
   .pos-pack-select p.disabled, .pos-pack-select p.disabled:hover {background-color: #D2D8E0; cursor: none; color: #B2B8BF; border-color: #B2B8BF;}
   .pos-pack-select.no-options p.disabled, .pos-pack-select.no-options p.disabled:hover {display: none;}
-  .pos-pack-select p.active, .pos-pack-select p:hover, .pos-pack-delivery p.active, .pos-pack-delivery p:hover {background-color: #1B365D; color: #fff; border-color: #000;}
+  .pos-pack-select p.active, .pos-pack-select p:hover, .pos-pack-delivery p.active, .pos-pack-delivery p:hover, .pos-frequency-select.extra .option.subscription.selected .pack-size, .pos-frequency-select.extra .option .option-pack-size p.active span:nth-of-type(1) {background-color: #1B365D; color: #fff; border-color: #000;}
 
 .general-info {
   padding: 32px 4vw 56px 4vw;
@@ -5234,7 +5308,7 @@ b {
 .sproduct-right .add-pack-to-cart a.preorder, .hp-buy-btn a.preorder {
   
 }
-.sproduct-right .add-pack-to-cart a .aptc-price {display: inline-block; vertical-align: top; margin-left: 16px;}
+.sproduct-right .add-pack-to-cart a .aptc-price {display: inline-block; vertical-align: top;}
 .sproduct-right .add-pack-to-cart a .aptc-price span, .all-products-grid .apg-entry .action-info em {text-decoration: line-through; opacity: 0.8;}
 .all-products-grid .apg-entry .action-info em {font-style: normal;}
 .sproduct-right .add-pack-to-cart a:hover {
@@ -10303,6 +10377,9 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
     left: 240px;
   }
 }
+@media (max-width: 1350px) {
+  .pos-frequency-select.extra .option span.note {position: static; display: block; margin-bottom: 8px;}
+}
 @media (max-width: 1340px) {
   .sproduct-left .pc-img-entry.rb img, .sproduct-left .pc-img-entry.lb img {max-height: initial; width: 90%;}
 }
@@ -12200,6 +12277,7 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   .upsell-wrapper {display: block;}
 }
 @media (max-width: 480px) {
+  .pos-frequency-select.extra .option.subscription p span:nth-of-type(2) {padding: 8px 0 0 0;}
   .general-info .gi-block:after {
     right: -72px;
     bottom: -48px;
@@ -12482,6 +12560,8 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   .modal .modal-content.cbm .mc-copy h4 {
     font-size: 22px;
   }
+  .pos-pack-select p, .pos-pack-delivery p, .pos-frequency-select.extra .option .pack-size, .pos-frequency-select.extra .option .option-pack-size p span:nth-of-type(1) {padding: 0 16px;}
+  .pos-pack-select p:not(:last-of-type), .pos-pack-delivery p:not(:last-of-type), .pos-frequency-select.extra .option .option-pack-size p:not(:last-of-type) {margin-right: 8px;}
 }
 @media (max-width: 424px) {
   .home-hero .title p,
@@ -12493,6 +12573,9 @@ body[data-aos-easing=ease-in-out-quart] [data-aos] {
   .home-hero .title.extra br {display: none;}
   .pci-wrapper h3 {font-size: 18px; letter-spacing: 0;}
   .pci-wrapper.scrub-details .sb-block p strong {font-size: 24px; letter-spacing: 0;}
+}
+@media (max-width: 400px) {
+  .pos-pack-select p, .pos-pack-delivery p, .pos-frequency-select.extra .option .pack-size, .pos-frequency-select.extra .option .option-pack-size p span:nth-of-type(1) {font-size: 13px;}
 }
 @media (max-width: 340px) {
   .sproduct .tabbed-info .ti-head a {
