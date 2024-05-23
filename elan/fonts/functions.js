@@ -21,16 +21,6 @@ window.onload = function() {
         rect.left <= (window.innerWidth || document.documentElement.clientWidth)
       )
     }
-    /*
-    document.addEventListener("rebuy:smartcart.line-item-increase", (event) => {
-      const cpq = Number(event.detail.item.quantity + 1);
-      const item = event.detail.item;
-      const maxq = event.detail.item.properties.pmax;
-      if(cpq == maxq) {
-        rebuy:smartcart.hideQuantitySelectors(item);
-      }
-    });
-    */
 
     //Cookies.set('darthvader', '1', { expires: 1 });
 
@@ -346,15 +336,6 @@ window.onload = function() {
     if(window.location.href.indexOf("?debugmode") > -1) {
       $("body").addClass("debug-mode");
     }
-    if($(".pos-pack-select").length > 0) {
-      if($(".pos-pack-select .active").attr("data-oldprice")) {
-        $(".aptc-price").empty();
-        $(".aptc-price").append("<span>$"+$(".pos-pack-select .active").attr("data-oldprice")+"</span> $"+$(".pos-pack-select .active").attr("data-price"));
-      }
-      else {
-        $(".aptc-price").empty().text("$"+$(".pos-pack-select .active").attr("data-price"));
-      }
-    }
     $(document).on("click", ".pos-pack-delivery p",function() {
       let curoption = $(this).attr("data-df");
       //$("#rc_autodeliver_options #rc_shipping_interval_frequency option[value='"+curoption+"']").prop('selected', true);
@@ -367,18 +348,8 @@ window.onload = function() {
     })
     $(document).on("click", ".pos-pack-select p",function(){
       if(!$(this).hasClass("disabled")) {
-        $(".pos-pack-select p, .pack-select-info p").removeClass("active");
-        let tic = $(this).attr("data-pi");
+        $(".pos-pack-select p").removeClass("active");
         let svariant = $(this).attr("data-pid");
-        //$(".aptc-price").empty().text("$"+$(this).attr("data-price"));
-        if($(this).attr("data-oldprice")) {
-          $(".aptc-price").empty();
-          $(".aptc-price").append("<span>$"+$(this).attr("data-oldprice")+"</span> $"+$(this).attr("data-price"));
-        }
-        else {
-          $(".aptc-price").empty().text("$"+$(this).attr("data-price"));
-        }
-        $(".pack-select-info p."+tic).addClass("active");
         $(this).addClass("active");
         $("#pmax").val($(this).attr("data-limit"));
         $(".product-variant-selector option[value='"+svariant+"']").prop('selected', true); 
@@ -386,80 +357,65 @@ window.onload = function() {
       return false;
     });
     if($(".pos-frequency-select").length > 0) {
+      setTimeout(function() {
       if($(".pos-frequency-select .option.subscription").hasClass("selected")) {
         setTimeout(function() {
           $(".rc-container-wrapper .rc-option__subsave .rc-radio__label").trigger("click");
-        },880);
-        if($(".pos-pack-select").length > 0) {
-          $(".pos-pack-select p").removeClass("active");
-          $(".pos-pack-select p").not($(".pos-pack-select p.subscription")).addClass("disabled");
-          $(".pos-pack-select .option-to-hide").addClass("to-hide");
-          $(".pos-pack-select p.subscription").removeClass("hide").addClass("active");
+        },1080);
+        setTimeout(function() {
           $(".rc_widget__option__plans__dropdown.rc-selling-plans__dropdown option[data-plan-option='Delivery every 4 Weeks']").prop('selected', true);
-          let subId = $(".pos-pack-select p.subscription.active").attr("data-pid");
-          $("#pmax").val($(".pos-pack-select p.subscription.active").attr("data-limit"));
-          $(".product-variant-selector option[value='"+subId+"']").prop('selected', true);
-          //$(".aptc-price").empty().text("$"+$(".pos-pack-select .active").attr("data-price"));
-          if($(".pos-pack-select .active").attr("data-oldprice")) {
-            $(".aptc-price").empty();
-            $(".aptc-price").append("<span>$"+$(".pos-pack-select .active").attr("data-oldprice")+"</span> $"+$(".pos-pack-select .active").attr("data-price"));
-          }
-          else {
-            $(".aptc-price").empty().text("$"+$(".pos-pack-select .active").attr("data-price"));
-          }
-          $(".subscription-frequency").addClass("visible");
-        }
+        },1380);
+  
+        let subId = $(".pos-frequency-select .option.subscription").attr("data-pid");
+        $("#pmax").val($(".pos-frequency-select .option.subscription").attr("data-limit"));
+        $(".product-variant-selector option[value='"+subId+"']").prop('selected', true);
       }
+      },680);
     }
-    $(document).on("click", ".pos-frequency-select .option",function(){
+    $(document).on("click",".pos-frequency-select.extra .odd-trigger", function(){
+      $(this).parent().toggleClass("active");
+      return false;
+    })
+    /* click on option */
+    $(document).on("click", ".pos-frequency-select .option.subscription",function(){
       $(".pos-frequency-select .option").removeClass("selected");
       $(this).addClass("selected");
-      if($(this).hasClass("subscription")) {
-        $(".pos-pack-select p").removeClass("active");
-        $(".pos-pack-select p").not($(".pos-pack-select p.subscription")).addClass("disabled");
-        $(".pos-pack-select .option-to-hide").addClass("to-hide");
-        $(".pos-pack-select p.subscription").removeClass("hide").addClass("active");
-        $(".pack-select-info p").removeClass("active");
-        $(".pack-select-info ."+$(".pos-pack-select p.subscription").attr("data-pi")).addClass("active");
-        $(".subscription-frequency").addClass("visible");
-        $(".rc_widget__option__plans__dropdown.rc-selling-plans__dropdown option[data-plan-option='Delivery every 4 Weeks']").prop('selected', true);
-        let subId = $(".pos-pack-select p.subscription.active").attr("data-pid");
-        $("#pmax").val($(".pos-pack-select p.subscription.active").attr("data-limit"));
-        $(".product-variant-selector option[value='"+subId+"']").prop('selected', true);
-        if($(".rc_container").length > 0) {
-          $(".rc-container-wrapper .rc-option__subsave .rc-radio__label").trigger("click");
-        }
-        //$(".aptc-price").empty().text("$"+$(".pos-pack-select .active").attr("data-price"));
-        if($(".pos-pack-select .active").attr("data-oldprice")) {
-          $(".aptc-price").empty();
-          $(".aptc-price").append("<span>$"+$(".pos-pack-select .active").attr("data-oldprice")+"</span> $"+$(".pos-pack-select .active").attr("data-price"));
-        }
-        else {
-          $(".aptc-price").empty().text("$"+$(".pos-pack-select .active").attr("data-price"));
-        }
+      $(".pos-frequency-select .option.one-time .option-pack-size p").removeClass("active");
+      let subId = $(this).attr("data-pid");
+      $("#pmax").val($(this).attr("data-limit"));
+      $(".product-variant-selector option[value='"+subId+"']").prop('selected', true);
+      if($(".rc_container").length > 0) {
+        $(".rc-container-wrapper .rc-option__subsave .rc-radio__label").trigger("click");
       }
-      else {
-        $(".pack-select-info p").removeClass("active");
-        $(".pos-pack-select p.subscription").addClass("hide");
-        $(".pos-pack-select .option-to-hide").removeClass("to-hide");
-        $(".subscription-frequency").removeClass("visible");
-        $(".pos-pack-select p").removeClass("active disabled");
-        $(".pos-pack-select p:first, .pack-select-info p:first").addClass("active");
-        if($(".rc_container").length > 0) {
-          $(".rc-container-wrapper .rc-option__onetime .rc-radio__label").trigger("click");
-        }
-        let subId = $(".pos-pack-select p.active").attr("data-pid");
-        $("#pmax").val($(".pos-pack-select p.active").attr("data-limit"));
-        $(".product-variant-selector option[value='"+subId+"']").prop('selected', true);
-        //$(".aptc-price").empty().text("$"+$(".pos-pack-select .active").attr("data-price"));
-        if($(".pos-pack-select .active").attr("data-oldprice")) {
-          $(".aptc-price").empty();
-          $(".aptc-price").append("<span>$"+$(".pos-pack-select .active").attr("data-oldprice")+"</span> $"+$(".pos-pack-select .active").attr("data-price"));
-        }
-        else {
-          $(".aptc-price").empty().text("$"+$(".pos-pack-select .active").attr("data-price"));
-        }
+      setTimeout(function() {
+          $(".rc_widget__option__plans__dropdown.rc-selling-plans__dropdown option[data-plan-option='Delivery every 4 Weeks']").prop('selected', true);
+        },580);
+      return false;
+    });
+    $(document).on("click", ".pos-frequency-select .option.one-time",function(event){
+      event.stopPropagation();
+      $(".pos-frequency-select .option.one-time .option-pack-size p:first").trigger("click");
+      return false;
+    });
+    $(document).on("click", ".pos-frequency-select .option .option-pack-size p",function(){
+      if(!$(".pos-frequency-select .option.one-time").hasClass("selected")) {
+        $(".pos-frequency-select .option").removeClass("selected");
+        $(".pos-frequency-select .option.one-time").addClass("selected");
+        $(".rc-container-wrapper .rc-option__onetime .rc-radio__label").trigger("click");
       }
+      $(".pos-frequency-select .option.one-time .option-pack-size p").removeClass("active");
+      $(this).addClass("active");
+      let subId = $(this).attr("data-pid");
+      $("#pmax").val($(this).attr("data-limit"));
+      $(".product-variant-selector option[value='"+subId+"']").prop('selected', true);
+      return false;
+    });
+    $(document).on("click", ".pos-frequency-select .option.subscription .option-dd li",function(){
+      $(this).parent().find("li").removeClass("active");
+      $(this).addClass("active");
+      $(this).parent().parent().find("span").text("Deliver this product every "+$(this).text().toLowerCase());
+      $(this).parent().parent().toggleClass("active");
+      $(".rc_widget__option__plans__dropdown.rc-selling-plans__dropdown option[data-plan-option='Delivery every "+$(this).text()+"']").prop('selected', true);
       return false;
     });
 
